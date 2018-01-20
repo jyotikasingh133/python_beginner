@@ -48,6 +48,7 @@ Home Work :
     		Program of nCr (Combinations and Permutations)
     		Using C(n,r) = fact(n) / (fact(n-r)*fact(r)) 
     		Using reccurance relation : C(n,r) = C(n-1,r-1) + C(n-1,r)
+			Using dynamic programming
 
 			Print Pascal triangle
 
