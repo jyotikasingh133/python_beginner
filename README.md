@@ -1,4 +1,4 @@
-Programming with Python
+## Programming with Python
 
 -- Session 1 --
 
