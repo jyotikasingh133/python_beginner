@@ -19,9 +19,9 @@ Part 3 : installing external libraries using pip command example (graphics)
 
 Home Work : 
 
-    		Draw concentric circles for AP, GP series
-	  	Program of AP, GP using Recursion and Stack
-	  	Addition program using arrays :  
+    	Draw concentric circles for AP, GP series
+		Program of AP, GP using Recursion and Stack
+		Addition program using arrays :  
 		[9,9,9] + [9,9] = [1,0,9,8] (asked in Google)
 
 -- Session 2 --
@@ -49,14 +49,14 @@ Home Work :
     		Using C(n,r) = fact(n) / (fact(n-r)*fact(r)) 
     		Using reccurance relation : C(n,r) = C(n-1,r-1) + C(n-1,r)
 
-		Print Pascal triangle
+			Print Pascal triangle
 
 
 -- Session 3 --
 
 Part 1: Classes and Objects
         
-       		Object Oriented Programming Concepts in Python
+       		Object Oriented Programming Concepts using Python
        
        
 Part 2 : Linked List 
