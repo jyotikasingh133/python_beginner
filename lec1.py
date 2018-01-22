@@ -50,6 +50,15 @@ print(x)
 x = True
 print(x)
 
+# Type Casting
+
+x = 5.4
+print(type(x))
+
+x = int(x)
+print(type(x))
+
+
 # Arrays : data stored at contiguous memory location
 # where elements can be accessed if address of 0th index
 # is known,
