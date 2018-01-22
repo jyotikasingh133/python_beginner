@@ -296,3 +296,69 @@ t2.third()
 # fun(int x) fun(float x) fun(int x, int y) all can exist
 # with same name in C++
 
+# Conditional statements :
+
+# if <-> if
+# elif <-> else if
+# else <-> else
+
+val = 3
+
+if val == 1:
+    print("One")
+elif val == 2:
+    print("Two")
+elif val == 3:
+    print("Three")
+else:
+    print("Enter valid number")
+
+# switch case is not allowed or does not exist
+
+# loops
+
+# for loop
+
+# start value of i = 1
+# i < 11, means last iteration value(11) is not included
+#  increment by 2 , i += 2
+
+# loop in increment
+for i in range(1, 11, 2):
+    print(i, end=", ")
+
+print("")
+# loop in decrement ,
+# i > 3, means last iteration value(3) is not included
+# decrement by 1 , i -= 1
+
+for i in range(10, 3, -1):
+    print(i, end=", ")
+
+# Shorthands are similar
+
+val = 6
+print(val)
+# val = val + 6
+val += 6
+print(val)
+# val = val - 4
+val += 4
+print(val)
+# val = val * 2
+val *= 2
+print(val)
+# val = val / 3
+val /= 3
+print(val)
+# val = val % 2
+val %= 2
+print(val)
+
+# while loop is also similar
+counter = 0
+
+while counter < 3:
+    print(counter)
+    counter += 1
+    
