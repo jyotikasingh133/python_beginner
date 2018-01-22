@@ -31,7 +31,8 @@ print("His favourite number is ", 0)
 
 # proof of dynamically typed
 # we don't have to worry about the data type of the variable
-# while writing the code
+# while writing the code, in python everything is
+# object type which is converted to other data types on the run time
 
 # float
 x = 2.1
@@ -49,7 +50,80 @@ print(x)
 x = True
 print(x)
 
-# Two types of data types
+# Arrays : data stored at contiguous memory location
+# where elements can be accessed if address of 0th index
+# is known,
+# what does it mean if I write arr[3]?
+# arr[0] is known
+# arr[3] = value at (address_of(arr[0]) + 3 * sizeof(each_data_type))
+
+# Concept of pointer arithmetic is not available in python
+# you can't call any variable by its's address
+# like we used to do in C/C++
+#
+# int *p = 1001; // p can stores address of integer
+# *p = *p + 2; is not allowed in python
+
+# So, we don't have to worry about pointer arithmetic and garbage collection
+# is also automatic
+
+
+# Homogeneous Arrays : collections of similar data types stored in
+# contiguous memory location, that's why it is possible
+# to use index
+arr = [1, 2, 3, 4, 5]
+
+# you can directly print the whole array using print function
+print(arr)
+# print with index, index starts with zero, max index will be size - 1
+print(arr[2])
+# get the size of an array - using len(arr) function
+print("The size of array is ",len(arr))
+
+# Heterogeneous Array : collection of non-similar data types
+#  Implemented using Linked Lists(class)
+
+arr2 = ["Hello", 1, True]
+print(arr2)
+
+
+# Array initialization
+
+# 1D Array
+arr3 = [5, 6, 7, 8, 9]
+print(arr3)
+
+arr4 = [0]*6
+print(arr4)
+
+# 2D Array
+
+mat1 = [[1, 2, 3], [4, 5, 6]]
+print(mat1)
+
+mat2 = []
+
+for i in range(4):
+    temp = [-3]*6
+    mat2.append(temp)
+
+print(mat2)
+
+
+# common methods in arrays
+# append : add
+# pop : remove, if not defined argument,
+#       last elements will be popped out
+#       by default otherwise you can define index : arr.pop(index)
+
+arr5 = [1, 2, 3, 4, 5]
+print(arr5)
+arr5.pop()
+print(arr5)
+arr5.pop(1)
+print(arr5)
+
+# Fundamentally there are two class of data types
 
 # Primitive (means earliest in evolution): built in the language
 # Derived (evolved): derived from the combination of existing primitive data type
@@ -59,6 +133,7 @@ print(x)
 # Class in python
 
 # Access Specifications (public, private, protected
+# Student class inheriting the object class
 
 
 class Student(object):
@@ -138,5 +213,86 @@ print(stud1.get_pass())
 # in another package without member functions (getter, setter)
 print("Yash scored ", stud1._marks, " out of 100 in his exam")
 
-stud1.isfailed()
+# stud1.isfailed()
 # print(stud1.__isPassed) , # again you can't access members outside the class directly
+
+# Inheritance (biological term) : as name suggests we are going to inherit the features
+
+print("\nInheritance\n")
+print("Single Inheritance : Dog inherit feature of Animal class\n")
+
+
+# Single inheritance
+class Animal:
+    # every class inherit object class even if it is not defined
+    def eat(self):
+        print('Eating...')
+
+
+class Dog(Animal):
+   def bark(self):
+        print('Barking...')
+
+
+d = Dog()
+d.eat()
+d.bark()
+
+# Multilevel inheritance
+print("Multilevel Inheritance : Baby Dog inherit feature of Dog class\n")
+print("Dog inherit feature of Animal class, ultimately Baby dog inherit features ")
+print("of both classes Animal and Dog \n")
+
+
+class BabyDog(Dog):
+    def weep(self):
+        print('Weeping...')
+
+
+bd = BabyDog()
+bd.eat()
+bd.bark()
+bd.weep()
+
+
+# Multiple inheritance
+class First(object):
+    def first(self):
+        print("first")
+
+
+class Second(object):
+    # function overriding
+    def first(self):
+        print("first, Override the first method of class First")
+    def second(self):
+        print("second")
+
+
+class Third(Second, First):
+    def third(self):
+        print("I am third and inheriting ")
+
+        self.second()
+        print(" then ",end=" ")
+        self.first()
+
+
+class ThirdChanged(First, Second):
+    def third(self):
+        print("I am third and inheriting ")
+        self.first()
+        print(" then ", end=" ")
+        self.second()
+
+
+t = Third()
+t.third()
+t2 = ThirdChanged()
+t2.third()
+
+# function overloading : not allowed in python
+# simply we just change parameters in function
+# fun(int x) fun(float x) fun(int x, int y) all can exist
+# with same name in C++
+
