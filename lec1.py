@@ -36,7 +36,7 @@ print("His favourite number is ", 0)
 
 # float
 x = 2.1
-print(x)
+print("The value of x = ",x)
 
 # integer
 x = 2
@@ -279,7 +279,7 @@ print(stud1.get_pass())
 # in another package without member functions (getter, setter)
 print("Yash scored ", stud1._marks, " out of 100 in his exam")
 
-# stud1.isfailed()
+stud1.isfailed()
 # print(stud1.__isPassed) , # again you can't access members outside the class directly
 
 # Inheritance (biological term) : as name suggests we are going to inherit the features
@@ -331,7 +331,8 @@ class Second(object):
     # function overriding
     def first(self):
         print("first, Override the first method of class First")
-    def second(self):
+
+        def second(self):
         print("second")
 
 
@@ -361,6 +362,8 @@ t2.third()
 # simply we just change parameters in function
 # fun(int x) fun(float x) fun(int x, int y) all can exist
 # with same name in C++
+
+
 # Diamond problem in Multiple inheritance
 #         A foo
 # B(A)             C(A)
