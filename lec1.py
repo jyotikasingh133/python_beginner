@@ -398,10 +398,20 @@ class C(A):
 
 class D(B, C):
     def foo2(self):
+        # value of x is modified by changing the order
+        # this is diamond problem,
+        # we have no clue how our data is modified in languages like java
+        # that's why they don't support inheritance
+        # but in python we resolve it by defining preference
+        # if D(B, C) , x will be modified by B using foo method
+        # if D(C, B) , x will be modified by C using foo method
+        
         x = self.foo()
+        
         print("foo from D", x)
 
 
 d = D()
 d.foo2()
+
 
