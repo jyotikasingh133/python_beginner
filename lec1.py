@@ -361,9 +361,8 @@ t2.third()
 # simply we just change parameters in function
 # fun(int x) fun(float x) fun(int x, int y) all can exist
 # with same name in C++
-
 # Diamond problem in Multiple inheritance
-#         A foo 
+#         A foo
 # B(A)             C(A)
 #       D(B,C)
 # we don't know foo is coming from which path
@@ -376,27 +375,33 @@ t2.third()
 class A:
     def foo1(self):
         print("foo from A")
+        return 1
 
 
 class B(A):
+
     def foo(self):
-        self.foo1()
-        print("foo from B")
+        x = self.foo1()
+
+        print("foo from B", x)
+        return x + 1
 
 
 class C(A):
     def foo(self):
-        self.foo1()
-        print("foo from C")
+        x = self.foo1()
+        print("foo from C", x)
+        return x + 2
 
 # C has given higher preference as we defined first in argument list
 
 
-class D(C, B):
+class D(B, C):
     def foo2(self):
-        self.foo()
-        print("foo from D")
+        x = self.foo()
+        print("foo from D", x)
 
 
 d = D()
 d.foo2()
+
