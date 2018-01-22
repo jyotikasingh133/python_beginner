@@ -170,7 +170,7 @@ print(val)
 val += 6
 print(val)
 # val = val - 4
-val += 4
+val -= 4
 print(val)
 # val = val * 2
 val *= 2
