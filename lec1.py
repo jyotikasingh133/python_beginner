@@ -197,6 +197,20 @@ counter = 0
 while counter < 3:
     print(counter)
     counter += 1
+    
+# Functions
+# def is used to define the function
+
+
+def fact(n):
+    if n == 0:
+        return 1
+    else:
+        return n*fact(n-1)
+
+
+print(fact(5))
+
 
 # Fundamentally there are two class of data types
 
