@@ -29,7 +29,9 @@ key_Hash.popitem()
 
 print(key_Hash.items())
 
-# Linked List : Linked structure
+
+# User defined
+# Linked List : Linked structure 
 
 
 class Node(object):
