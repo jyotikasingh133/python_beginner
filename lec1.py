@@ -35,6 +35,7 @@ print("His favourite number is ", 0)
 # object type which is converted to other data types on the run time
 
 # float
+
 x = 2.1
 print("The value of x = ",x)
 
@@ -52,8 +53,16 @@ print(x)
 
 # Type Casting
 
+# x is currently object type but when we compile the code
+# it gets converted into float automatically as we initialized the value 
+# with 5.4, this is called implicit typecasting
+
 x = 5.4
 print(type(x))
+
+# we use int function which converts or typecast the float x to int x
+# Here we explicitly defined int function to typecast float to int 
+# this is called explicit typecasting 
 
 x = int(x)
 print(type(x))
