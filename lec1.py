@@ -114,6 +114,11 @@ print(arr3)
 arr4 = [0]*6
 print(arr4)
 
+# more sophisticated way of array initialization
+
+arrr = [i*i for i in range(1, 10, 2)]
+print(arrr)
+
 # 2D Array
 
 mat1 = [[1, 2, 3], [4, 5, 6]]
