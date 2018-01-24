@@ -43,18 +43,28 @@ print(mx(2, 3))
 
 # lambda functions and lists
 # get the even numbers from the list
-my_list = [1, 5, 4, 6, 8, 11, 3, 12]
 
-# filter is a function in which first argument is lambda function,
-# second argument is the list on which you wish to apply the lambda function
-# argument of lambda function will be the each element of the list traversed
-# one by one 
+arr = [i for i in range(5)]
 
-is_even = lambda x: (x % 2 == 0)
-new_list = list(filter(is_even, my_list))
+# map function means modify
+# each element of the list by the
+# using lambda function 
+# first arg: lambda function, second arg: arr
+
+
+sqaure = lambda x: x**2
+new_list = list(map(sqaure, arr))
 print(new_list)
 
+# filter function means filter
+# each element of the list by the
+# according lambda function
+# first arg: lambda function, second arg: arr
 
+
+is_even = lambda x: x % 2 == 0
+new_list = list(filter(is_even, arr))
+print(new_list)
 
 
 # User Defined Abstract Data Types (Data Structures)
