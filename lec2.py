@@ -1,3 +1,4 @@
+
 # Advanced Data Types in Python
 
 # Dictionary or Hash
@@ -30,19 +31,38 @@ key_Hash.popitem()
 print(key_Hash.items())
 
 # Lambda function
+# lambda argument1,argument2 .. argument n : return statement
 
+def sq(x):
+    return x**2
 square = lambda x: x**2
+
+def plus(x,y):
+    return x + y
 add = lambda x, y: x + y
+
+def maxim(x,y):
+    if x > y:
+        return x
+    else:
+        return y
+    
 mx = lambda x, y: x if x > y else y
+
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * fact(n-1)
+    
 fact = lambda n: 1 if n == 1 else n * fact(n-1)
 
-print(square(2))
-print(fact(5))
-print(add(2, 3))
-print(mx(2, 3))
+print(square(2),", ",sq(2))
+print(fact(5),", ",factorial(5))
+print(add(2, 3),", ",plus(2, 3))
+print(mx(2, 3),", ",maxim(2, 3))
 
 # lambda functions and lists
-# get the even numbers from the list
 
 arr = [i for i in range(5)]
 
