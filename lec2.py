@@ -29,8 +29,35 @@ key_Hash.popitem()
 
 print(key_Hash.items())
 
+# Lambda function
 
-# User defined
+square = lambda x: x**2
+add = lambda x, y: x + y
+mx = lambda x, y: x if x > y else y
+fact = lambda n: 1 if n == 1 else n * fact(n-1)
+
+print(square(2))
+print(fact(5))
+print(add(2, 3))
+print(mx(2, 3))
+
+# lambda functions and lists
+# get the even numbers from the list
+my_list = [1, 5, 4, 6, 8, 11, 3, 12]
+
+# filter is a function in which first argument is lambda function,
+# second argument is the list on which you wish to apply the lambda function
+# argument of lambda function will be the each element of the list traversed
+# one by one 
+
+is_even = lambda x: (x % 2 == 0)
+new_list = list(filter(is_even, my_list))
+print(new_list)
+
+
+
+
+# User Defined Abstract Data Types (Data Structures)
 # Linked List : Linked structure 
 
 
