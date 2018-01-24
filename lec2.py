@@ -66,6 +66,7 @@ print(mx(2, 3),", ",maxim(2, 3))
 
 arr = [i for i in range(5)]
 
+
 # map function means modify
 # each element of the list by the
 # using lambda function 
@@ -85,6 +86,26 @@ print(new_list)
 is_even = lambda x: x % 2 == 0
 new_list = list(filter(is_even, arr))
 print(new_list)
+
+# reduce() is used to reduce the data of 
+# the whole array into single value
+# We took example as summation of all 
+# elements in the list
+
+
+def sigma(arr):
+    x = arr[0]
+    for i in range(1, len(arr)):
+        y = arr[i]
+        x = x + y
+    return x
+
+
+import functools as f
+
+sig = lambda x, y: x + y
+
+print(f.reduce(sig, arr), ", ", sigma(arr), ", ", sum(arr))
 
 
 # User Defined Abstract Data Types (Data Structures)
