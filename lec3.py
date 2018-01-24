@@ -102,7 +102,35 @@ for y in range(y1, y2):
 
 # Jack Elton Bresenham, a computer scientist in US solve this problem with
 # unique approach in which he introduce the concept of decision parameters
+# you can see this on the web , earlier when we were doing round off then
+# we are supposed to roundoff x to x or x+1, using decision parameter p 
+# which is computed in integer values and also recursive in nature
+# p(i) is dependent upon p(i-1)  
+# Bresenham obtain this via mathematical formula, for more information how 
+# he did it check out the given link below :
+# https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm
 
+
+def BresenhamLine(x1, y1, x2, y2):
+    dx = abs(x2 - x1)
+    dy = abs(y2 - y1)
+
+    # Decision parameter p    
+    p = 2 * dy - dx
+
+    x = x1
+    y = y1
+
+    for y in range(y1, y2):
+        if p > 0:
+            p += 2 * (dx - dy)
+            x += 1
+        else:
+            p += 2 * dx
+        pt = g.Point(x, y)
+        pt.draw(win)
+
+BresenhamLine(x1, y1, x2, y2)
 
 win.getMouse()
 win.close()
